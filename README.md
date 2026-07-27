@@ -1,8 +1,10 @@
 # 🚀 Automação de Faturamento e Cobrança com Google Apps Script
 
+> **Projeto real desenvolvido para automatizar o processo de cobrança de ativos logísticos, reduzindo o tempo operacional de 1h30 para menos de 3 minutos e eliminando cobranças duplicadas.**
+
 ## 📌 Contexto do Negócio
 
-A gestão de ativos logísticos (como sacas e gaylords) enviados a bases parceiras é crucial para evitar prejuízos financeiros. O processo de verificação de planilhas de inventário e cobrança de parceiros com pendências era manual, consumindo horas de trabalho da equipe e era suscetível a erros de digitação (valores e detalhes).
+A gestão de ativos logísticos (como sacas e gaylords) enviados a bases parceiras é crucial para evitar prejuízos financeiros. O processo de verificação das planilhas de inventário e cobrança dos parceiros com pendências era manual, consumia horas de trabalho da equipe e era suscetível a erros de digitação (valores e detalhes).
 
 ## 💡 A Solução
 
@@ -30,13 +32,16 @@ flowchart TD
 
 ## 🛠️ Tecnologias e Técnicas Aplicadas
 
-- **Google Apps Script (JavaScript):** motor lógico de automação, rodando nativamente dentro do Google Planilhas
-- **Interface Customizada (UI):** menu interativo (`onOpen`) direto na planilha, permitindo que qualquer pessoa da equipe dispare a automação com um clique — sem precisar abrir o editor de código
-- **Geração de HTML dinâmica:** o corpo do e-mail é montado condicionalmente — só exibe a linha de "Sacas" ou "Gaylords" se houver pendência real, evitando poluir a comunicação com dados irrelevantes
-- **Botão de call to action estilizado:** e-mail inclui um botão HTML (CSS inline) direcionando o parceiro para o formulário de regularização
-- **Anexos automáticos via Google Drive:** integração com `DriveApp` para buscar e anexar PDFs de apoio (manuais/termos) automaticamente em cada envio, com tratamento de erro caso o arquivo não seja encontrado
-- **Modo Sandbox (Teste):** rotinas de teste isoladas — tanto para disparo mensal quanto semanal — que enviam e-mails apenas para o e-mail do desenvolvedor, permitindo validar mudanças sem risco de notificar parceiros reais
-- **Tratamento de Exceções:** uso de `try/catch` para que falhas pontuais de envio não interrompam a execução do robô para os demais parceiros
+| Tecnologia / Técnica | Uso no projeto |
+|---|---|
+| **Google Apps Script (JavaScript)** | Motor lógico de automação, rodando nativamente dentro do Google Planilhas |
+| **SpreadsheetApp** | Leitura da planilha de controle e escrita do status atualizado |
+| **GmailApp / MailApp** | Envio dos e-mails de cobrança para os parceiros |
+| **DriveApp** | Busca e anexação automática dos PDFs de apoio, com tratamento de erro caso o arquivo não seja encontrado |
+| **Geração de HTML dinâmica** | O corpo do e-mail é montado condicionalmente — só exibe a linha de "Sacas" ou "Gaylords" se houver pendência real, evitando poluir a comunicação com dados irrelevantes |
+| **Interface Customizada (UI)** | Menu interativo (`onOpen`) direto na planilha, permitindo que qualquer pessoa da equipe dispare a automação com um clique — sem precisar abrir o editor de código |
+| **Modo Sandbox (Teste)** | Rotinas de teste isoladas — mensal e semanal — que enviam e-mails apenas para o e-mail do desenvolvedor, validando mudanças sem risco de notificar parceiros reais |
+| **Tratamento de Exceções (`try/catch`)** | Falhas pontuais de envio não interrompem a execução do robô para os demais parceiros |
 
 ## 📁 Estrutura do Projeto
 
