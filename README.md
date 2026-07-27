@@ -64,6 +64,20 @@ Os arquivos `.js` foram organizados por responsabilidade para fins de leitura no
 
 Para gerar uma nova planilha de exemplo do zero, abra o `basedeados.ipynb` (Jupyter/Colab), instale as dependências listadas em `requirements.txt` e rode as células.
 
+## 📸 Exemplo em Funcionamento
+
+**Planilha de controle** — cada linha é atualizada automaticamente após o disparo, evitando cobranças duplicadas:
+
+![Planilha de exemplo](docs/print-planilha-exemplo.png)
+
+**E-mail — Disparo Mensal (cobrança final):**
+
+![E-mail mensal](docs/print-mensal.png)
+
+**E-mail — Disparo Semanal (lembrete):**
+
+![E-mail semanal](docs/print-semanal.png)
+
 ## 📊 Impacto Gerado
 
 - Redução do tempo de execução do processo de **1h30 semanais para no máximo 3 minutos** (economia de mais de 96% de esforço operacional), atendendo a cerca de **200 bases parceiras**
