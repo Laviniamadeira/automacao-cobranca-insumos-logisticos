@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+.venv/
+env/
+
+# Jupyter
+*.ipynb_checkpoints
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Google Apps Script (clasp)
+.clasp.json
+.clasprc.json
+
+# Arquivos temporários / saída
+*.tmp
+*.log
